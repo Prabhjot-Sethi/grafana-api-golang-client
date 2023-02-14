@@ -72,7 +72,7 @@ func (c Client) WithOrgID(orgID int64) *Client {
 }
 
 func (c *Client) Request(method, requestPath string, query url.Values, body io.Reader, responseStruct interface{}) error {
-	c.request(method, requestPath, query, body, responseStruct)
+	return c.request(method, requestPath, query, body, responseStruct)
 }
 
 func (c *Client) request(method, requestPath string, query url.Values, body io.Reader, responseStruct interface{}) error {
